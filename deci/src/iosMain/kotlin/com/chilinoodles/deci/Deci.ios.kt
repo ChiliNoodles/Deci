@@ -1,10 +1,15 @@
 package com.chilinoodles.deci
 
+
+import com.chilinoodles.cedar.logging.Cedar
 import com.chilinoodles.deci.Constants.DECIMAL_REGEX
 import com.kttipay.common.deci.DeciSerializer
 import kotlinx.cinterop.BetaInteropApi
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.serialization.Serializable
+import platform.Foundation.NSDecimalNumber
+import platform.Foundation.NSDecimalNumberHandler
+import platform.Foundation.NSRoundingMode
 
 @OptIn(BetaInteropApi::class, ExperimentalForeignApi::class)
 @Serializable(with = DeciSerializer::class)
