@@ -49,8 +49,18 @@ expect class Deci : Comparable<Deci> {
 @Deprecated("Use Deci.fromStringOrZero(value) instead", ReplaceWith("Deci.fromStringOrZero(value)"))
 fun String.toSafeDeci(): Deci = Deci.fromStringOrZero(this)
 
+/**
+ * Sums all [Deci] values in this collection.
+ * Returns [Deci.ZERO] for empty collections.
+ */
 fun Iterable<Deci>.sumDeci(): Deci = this.fold(Deci.ZERO) { acc, d -> acc + d }
 
+/**
+ * Raises this [Deci] to the given integer power.
+ * 
+ * @param exp The exponent (must be non-negative)
+ * @throws IllegalArgumentException if [exp] is negative
+ */
 fun Deci.pow(exp: Int): Deci {
     require(exp >= 0) { "Negative exponents are not supported" }
     var result = Deci.ONE
@@ -60,4 +70,8 @@ fun Deci.pow(exp: Int): Deci {
     return result
 }
 
+/**
+ * Converts this [Deci] to [Long] by first converting to [Double].
+ * The fractional part is truncated.
+ */
 fun Deci.toLong(): Long = this.toDouble().toLong()
