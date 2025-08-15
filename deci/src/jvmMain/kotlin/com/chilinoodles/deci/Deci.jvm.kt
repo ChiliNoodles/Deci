@@ -21,14 +21,14 @@ actual class Deci : Comparable<Deci> {
     actual fun divide(
         divisor: Deci,
         scale: Int,
-        roundingMode: com.chilinoodles.deci.RoundingMode
+        roundingMode: RoundingMode
     ): Deci {
         TODO("Not yet implemented")
     }
 
     actual fun setScale(
         scale: Int,
-        roundingMode: com.chilinoodles.deci.RoundingMode
+        roundingMode: RoundingMode
     ): Deci {
         TODO("Not yet implemented")
     }
