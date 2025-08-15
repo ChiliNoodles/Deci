@@ -26,8 +26,6 @@ actual class Deci private constructor(
             require(DECIMAL_REGEX.matches(sanitized)) {
                 "Invalid decimal literal: '$sanitized'"
             }
-            Cedar.tag("Deci")
-                .d("Creating Deci from value: '$sanitized'")
             NSDecimalNumber(sanitized)
         }
     )

@@ -7,6 +7,7 @@ compose = "1.8.2"
 kotlinx-coroutines = "1.10.2"
 kotlinx-serialization = "1.9.0"
 androidx-activityCompose = "1.10.1"
+cedar = "0.2.0"
 
 [libraries]
 
@@ -16,6 +17,7 @@ kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+chilinoodles-cedar = { module = "io.github.chilinoodles:cedar-logging", version.ref = "cedar" }
 
 [plugins]
 

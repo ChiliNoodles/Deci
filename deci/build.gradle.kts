@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.android.library)
@@ -25,6 +29,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.coroutines.test)
             implementation(libs.kotlinx.serialization.json)
+            implementation(libs.chilinoodles.cedar)
         }
 
         commonTest.dependencies {
