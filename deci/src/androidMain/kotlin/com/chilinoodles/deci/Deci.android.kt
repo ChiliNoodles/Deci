@@ -5,6 +5,7 @@ import com.kttipay.common.deci.DeciSerializer
 import kotlinx.serialization.Serializable
 import java.math.BigDecimal
 import java.math.MathContext
+import java.math.RoundingMode as JavaRoundingMode
 
 @Serializable(with = DeciSerializer::class)
 actual class Deci(private val internal: BigDecimal) : Comparable<Deci> {
